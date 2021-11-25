@@ -1,0 +1,372 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Andada Pro', serif;
+}
+
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../images/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*****************************************/
+.compus-col img{
+    height: 500px;
+    width: 300px;
+}
+
+.facilities-col img{
+    height: 300px;
+    width: 380px;
+}
+
+/**********************************************/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.13);
+}
+
+nav  .logo{
+    width:50px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(228, 219, 208);
+    text-align: center;
+    font-size: large;
+    padding-top: 5px;
+    margin-left: 35px;
+    padding-top: 5px;
+
+
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+nav img{
+    width: 150px;
+}
+.nav-links ul{
+    margin-right: 80px;
+}
+.nav-links ul li{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+nav a {
+    position: relative;
+    top: 10px;
+    padding: 5px;
+    padding-top: 0;
+    margin-left: 10px;
+}
+
+.nav-links ul li a{
+    text-decoration: none;
+    top: 5px;
+    position: relative;
+    color: rgb(0, 153, 255);
+    font-size: 20px;
+
+}
+
+.nav-links ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: rgba(238, 227, 227, 0.589);
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+    text-align: right;
+    margin-left: 14px;
+
+}
+
+.nav-links ul li a:hover::after{
+    width: 80%;
+}
+/************end of nav***************/
+.text-box{
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    
+}
+.contioner{
+    top:40%;
+    position: absolute;
+    width: 100%;
+}
+
+.contioner h1{
+    font-size: 40px;
+}
+
+nav .fas{
+    display: none;
+}
+/********mediaa query*********/
+@media(max-width:700px){
+    .contioner h1{
+        font-size: 20px;
+    }
+
+    .contioner p{
+        font-size: 14px;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        z-index: 2;
+        background-color: #666;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        transition: 0.4s;
+    }
+
+    nav .fas{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+
+}
+
+
+.courses{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.courses h1{
+    font-size: 26px;
+}
+
+.courses p{
+    font-size: 22px;
+
+
+}
+
+.row{
+    display: flex;
+    padding-top: 35px;
+    margin-bottom: 50px;
+}
+
+.col{
+    flex-basis: 30%;
+    background-color: rgba(128, 93, 54, 0.11);
+    margin:15px;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.col:hover{
+    box-shadow: 0 0 15px 0px rgba(43, 25, 25, 0.295);
+}
+
+.col h3{
+    font-size: 24px
+
+}
+
+.col p{
+    font-size: 22px;
+}
+
+@media(max-width:700px)
+{
+    .row{
+        flex-direction: column;
+    }
+
+    .row p{
+        font-size: 18px;
+    }
+
+    .row h1{
+        font-size: 24px;
+    }
+
+    .row h3{
+        font-size: 22px;
+    }
+
+    
+}
+
+/*******media query end******/
+
+.Campus{
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 75px;
+}
+
+.Campus h1 , .courses h1{
+    color: rgb(5, 5, 43);
+}
+.Campus .compus-col img{
+    width: 320px;
+    border-radius: 15px;
+}
+
+
+.Campus .compus-col {
+    flex-basis: 33%;
+    margin-right: 10px;
+    margin:15px;
+    border-radius: 7px;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.compus-col:hover{
+    transform:translate3d(0 , 0 ,30px);
+    border: 2px solid lightblue;
+    border-radius: 20px;
+}
+
+
+
+.facilities{
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 75px;
+}
+
+.facilities .facilities-col{
+    flex-basis: 33%;
+    margin-right: 10px;
+    margin:15px;
+    border-radius: 7px;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.facilities .facilities-col img{
+    width: 320px;
+    border-radius: 15px;
+}
+
+/******end facilaitis******/
+
+.testimonials,.aboutus{
+    width: 80%;
+    padding-top: 70px;
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.testimonials-col{
+    flex-basis: 44%;
+    background-color: #5e52523d;
+    margin: 10px;
+    display: flex;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.testimonials-col img{
+    height: 45px;
+    border-radius: 50%;
+    position: relative;
+}
+
+
+.testimonials-col h3{
+    margin-top:55px ;
+    text-align: right;
+}
+
+
+/***************call us*******************/
+
+.cu{
+    width: 80%;
+    margin: 100px auto;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px;
+    border-radius: 10px;
+}
+
+.cu h1{
+    color: #666;
+}
+.cu a{
+    text-decoration: none;
+    background-color: rgba(138, 114, 114, 0.479);
+    border: 2px solid rgb(141, 129, 129);
+    color: black;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: 0.4s;
+}
+.cu a:hover{
+    background-color: rgb(167, 33, 33);
+}
+
+@media(max-width:700px)
+{
+    .cu {
+        padding: 20px;
+    border-radius: 5px;
+    margin: 30px auto;
+    }
+}
+
+.aboutus h1{
+    font-size: 24px;
+}
+
+.aboutus p{
+    font-size: 20px;
+}
+.footer{
+    padding-bottom: 1px;
+    font-size: 20px;
+    background-color: #6262622f;
+    text-align: center;
+    padding-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.footer i{
+    margin-left: 5px;
+}
